@@ -12,6 +12,35 @@
         height: 100px;
         color: lightskyblue;
     }
+
+    .carousel-indicators li {
+         display: inline-block;
+         width: 75px;
+         height: 75px;
+         margin: 10px;
+         text-indent: 0;
+         cursor: pointer;
+         border: none;
+         border-radius: 50%;
+         background-color: #0000ff;
+         box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);
+     }
+    .carousel-indicators .active {
+        width: 75px;
+        height: 75px;
+        margin: 10px;
+        background-color: #ffff99;
+    }
+
+    #controlr {
+        background-image: none;
+        color: seashell;
+    }
+
+    #controll {
+        background-image: none;
+        color: seashell;
+     }
 </style>
 
 <head>
@@ -65,10 +94,11 @@
         <h1 style="height: 50px;"><strong>My Projects</strong></h1>
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
-            <ol class="carousel-indicators">
+            <ol class="carousel-indicators" >
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
                 <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
             </ol>
 
             <!-- Wrapper for slides -->
@@ -95,19 +125,29 @@
                 <div class="item">
                     <div class = "description">
                         <h2>Chat Application</h2>
-                        <p> Built a Chat App that allows users to talk to one another with nicknames.
-                            <br>Technologies used:Node.js, Express, Socket.io, Mongodb</p>
+                        <p> Built an anonymous classroom chat for students to ask questions to teachers anonymously. Allows teachers to host classroom chats
+                             that students can partake in.
+                            <br>Technologies used:Node.js, Express, Socket.io, Mongodb, JQuery</p>
                     </div>
-                    <img src="./Imgs/Chat.png" alt="Chat App" style="width:100%;">
+                    <img src="./Imgs/Chat1.png" alt="Chat App" style="width:100%;">
+                </div>
+
+                <div class="item">
+                    <div class = "description">
+                        <h2>Youtube Synced Player</h2>
+                        <p> Built a web app that allows multiple users to play a youtube video that is synchronized among all the users.
+                            <br>Technologies used:Node.js, Express, Socket.io, Youtube Player Framework, JQuery</p>
+                    </div>
+                    <img src="./Imgs/Youtube.png" alt="Chat App" style="width:100%;">
                 </div>
             </div>
 
             <!-- Left and right controls -->
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <a class="left carousel-control" id = "controll" href="#myCarousel" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <a class="right carousel-control controls" id = "controlr" href="#myCarousel" data-slide="next">
                 <span class="glyphicon glyphicon-chevron-right"></span>
                 <span class="sr-only">Next</span>
             </a>
